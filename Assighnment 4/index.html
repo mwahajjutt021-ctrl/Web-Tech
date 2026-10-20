@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Slides</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Markdown Slides</h1>
+    <div>
+      <span id="status">Saved</span>
+      <button id="save">Save</button>
+    </div>
+  </header>
+
+  <nav>
+    <button id="tabEdit" class="tab active">Edit</button>
+    <button id="tabPresent" class="tab">Present</button>
+  </nav>
+
+  <!-- EDIT VIEW -->
+  <section id="editView" class="view">
+    <textarea id="input" spellcheck="false"></textarea>
+
+    <div class="slideBox">
+      <div class="slide" id="previewSlide"></div>
+      <div class="controls">
+        <button id="prev1">Previous</button>
+        <span id="count1">1 / 1</span>
+        <button id="next1">Next</button>
+        <button id="fs1">Full screen</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESENT VIEW -->
+  <section id="presentView" class="view" hidden>
+    <div class="slideBox">
+      <div class="slide big" id="presentSlide"></div>
+      <div class="controls">
+        <button id="prev2">Previous</button>
+        <span id="count2">1 / 1</span>
+        <button id="next2">Next</button>
+        <button id="fs2">Full screen</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

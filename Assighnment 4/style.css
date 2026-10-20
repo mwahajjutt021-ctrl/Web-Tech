@@ -1,0 +1,90 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #1e1e2e;
+  color: #cdd6f4;
+  font-family: system-ui, sans-serif;
+  overflow: hidden;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #313244;
+  color: #cdd6f4;
+  cursor: pointer;
+}
+button:hover:not(:disabled) { background: #45475a; }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+header, nav {
+  display: flex;
+  align-items: center;
+  background: #11111b;
+  border-bottom: 1px solid #313244;
+}
+header { justify-content: space-between; padding: 8px 16px; }
+header h1 { font-size: 1rem; color: #89b4fa; }
+header div { display: flex; align-items: center; gap: 12px; }
+#status { font-size: 0.8rem; color: #a6e3a1; }
+#status.unsaved { color: #f38ba8; }
+#save { background: #89b4fa; color: #11111b; }
+
+.tab {
+  padding: 12px 24px;
+  border-radius: 0;
+  background: transparent;
+  color: #a6adc8;
+}
+.tab.active {
+  color: #89b4fa;
+  background: #1e1e2e;
+  border-bottom: 2px solid #89b4fa;
+}
+
+.view { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+#editView { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #313244; }
+
+textarea {
+  padding: 20px;
+  border: none;
+  background: #1e1e2e;
+  color: #cdd6f4;
+  font: 14px/1.6 monospace;
+  resize: none;
+  outline: none;
+}
+
+.slideBox { display: flex; flex-direction: column; min-height: 0; background: #1e1e2e; }
+
+.slide {
+  flex: 1;
+  padding: 40px 60px;
+  overflow-y: auto;
+  background: #fff;
+  color: #1e1e2e;
+  font-size: 18px;
+  line-height: 1.7;
+}
+.slide.big { padding: 60px 100px; font-size: 28px; }
+
+.slide h1 { font-size: 2.2em; margin-bottom: 0.5em; }
+.slide h2 { font-size: 1.6em; margin: 0.8em 0 0.4em; }
+.slide ul, .slide ol { margin: 0.5em 0 0.5em 1.5em; }
+.slide pre { padding: 16px; margin: 1em 0; background: #1e1e2e; color: #cdd6f4; border-radius: 6px; }
+.slide blockquote { border-left: 4px solid #89b4fa; padding-left: 16px; margin: 1em 0; }
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  background: #11111b;
+  border-top: 1px solid #313244;
+}
